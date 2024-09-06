@@ -1,10 +1,6 @@
-/// <reference path="typings/floating-api.d.ts" />
+import { api } from "@unblu/floating-js-api";
 
-(function () {
-    const ConversationType = window.unblu.ConversationType;
-    window.unblu.api.initialize().then(api => {
-        // chat
-        const chatBtn = document.getElementById('start-chat');
-        chatBtn.addEventListener('click', () => api.startConversation(ConversationType.CHAT_REQUEST));
-    });
-})();
+const unbluApi = await api.initialize();
+
+const chatBtn = document.getElementById('start-chat');
+chatBtn.addEventListener('click', () => unbluApi.startConversation(ConversationType.CHAT_REQUEST));
