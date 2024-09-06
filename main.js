@@ -10,4 +10,6 @@
             api.joinConversation(pinInput.value).then(conversation => {
                 console.log('Joined the conversation: ', conversation.getConversationId());
     });
+});
+});
 })();
