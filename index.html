@@ -4,6 +4,7 @@
     <script src="https://services8.unblu.com/unblu/js-api/v8/floating/floating-api.min.js"></script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
         const api = unblu.floating.api
      // configure the unblu server
      .configure({
@@ -15,7 +16,7 @@
 
         const chatBtn = document.getElementById('active');
         chatBtn.addEventListener('click', () => api.getActiveConversation());
-       
+    });
     </script>
 </head> 
 <body>
