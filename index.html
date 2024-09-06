@@ -3,23 +3,12 @@
     src="https://services8.unblu.com/unblu/visitor.js?x-unblu-apikey=DrUyck30SBmYKNmEyOqtuQ"></script>
     <script src="https://services8.unblu.com/unblu/js-api/v8/floating/floating-api.min.js"></script>
     <script type="text/javascript" defer="defer" src="./main.js"></script>
-
-    <!-- <script>
-        const api = unblu.floating.api
-     // configure the unblu server
-     .configure({
-         apiKey: "DrUyck30SBmYKNmEyOqtuQ",
-         serverUrl: "https://services8.unblu.com"
-     })
-     // initialize the api.
-     .initialize();
-
-        const chatBtn = document.getElementById('active');
-        chatBtn.addEventListener('click', () => api.getActiveConversation());
-    </script> -->
 </head> 
 <body>
+
     <button id="start-conversation">Start Conversation</button>
+    <input type="text" id="pin-input" placeholder="Enter your PIN here" maxlength="6">
+    <button id="join">Join</button>
     <h1>Welcome to Unblu Chat Integration</h1>
     <p>This page integrates Unblu for Floating Visitor UI functionality.</p>
 </body>
