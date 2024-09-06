@@ -2,7 +2,16 @@
     <script type="text/javascript" defer
     src="https://services8.unblu.com/unblu/visitor.js?x-unblu-apikey=DrUyck30SBmYKNmEyOqtuQ"></script>
     <script src="https://services8.unblu.com/unblu/js-api/v8/floating/floating-api.min.js"></script>
-    <script type="module" defer="defer" src="./main.js"></script>
+
+    <script>
+        //After the api script has been loaded it may be accessed in the global scope
+        window.unblu.floating.api.initialize().then(api => {
+            // use the api
+            const chatBtn = document.getElementById('start-chat');
+            chatBtn.addEventListener('click', () => api.startConversation(ConversationType.CHAT_REQUEST));
+        });
+    </script>
+
 </head> 
 <body>
     <button id="start-chat">Write message</button>
