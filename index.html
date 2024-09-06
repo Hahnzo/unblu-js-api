@@ -1,16 +1,9 @@
 <head> 
-    <script src="services8.unblu.com/unblu/js-api/v8/floating/floating-api.min.js"></script>
-        <script>
-            //After the api script has been loaded it may be accessed in the global scope
-            window.unblu.floating.api.initialize().then(api => {
-                const chatBtn = document.getElementById('start-chat');
-                chatBtn.addEventListener('click', () => api.startConversation(ConversationType.CHAT_REQUEST));
-            });
-        </script>
     <script type="text/javascript" defer="defer"
     src="https://services8.unblu.com/unblu/visitor.js?x-unblu-apikey=DrUyck30SBmYKNmEyOqtuQ"></script>
 </head> 
 <body>
+    <button id="start-chat">Write message</button>
     <h1>Welcome to Unblu Chat Integration</h1>
     <p>This page integrates Unblu for Floating Visitor UI functionality.</p>
 </body>
