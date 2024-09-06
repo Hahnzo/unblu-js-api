@@ -4,7 +4,7 @@
     <script src="https://services8.unblu.com/unblu/js-api/v8/floating/floating-api.min.js"></script>
 
     <script>
-        const api = await unblu.floating.api.initialize();
+        const api = unblu.floating.api.initialize();
 
         const chatBtn = document.getElementById('start-chat');
         chatBtn.addEventListener('click', () => api.getActiveConversation());
