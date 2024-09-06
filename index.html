@@ -2,8 +2,14 @@
     <script type="text/javascript" defer
     src="https://services8.unblu.com/unblu/visitor.js?x-unblu-apikey=DrUyck30SBmYKNmEyOqtuQ"></script>
     <script src="https://services8.unblu.com/unblu/js-api/v8/floating/floating-api.min.js"></script>
-    
-    <script type="text/javascript" defer="defer" src="./main.js"></script>
+
+    <script>
+        const api = await unblu.floating.api.initialize();
+
+        const chatBtn = document.getElementById('start-chat');
+        chatBtn.addEventListener('click', () => api.getActiveConversation());
+       
+    </script>
 </head> 
 <body>
     <button id="start-chat">Write message</button>
