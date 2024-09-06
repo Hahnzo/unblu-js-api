@@ -1,7 +1,7 @@
 (function () {
     window.unblu.floating.api.initialize().then(api => {
-        // chat
+        console.log(api.isInitialized())
         const chatBtn = document.getElementById('conversation');
-        chatBtn.addEventListener('click', () => api.isInitialized());
+        chatBtn.addEventListener('click', () => api.startConversation());
     });
 })();
